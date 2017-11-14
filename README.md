@@ -1,4 +1,4 @@
-# Finch Soound
+# Finch Sound
 
 You will be experimenting with sound using the Finch robot.  
 
