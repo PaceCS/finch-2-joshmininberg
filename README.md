@@ -1,21 +1,22 @@
-# Finch Lightshow
+# Finch Soound
 
-You will be creating a lightshow using the Finch robot.  The Finch can do many things, but the simplest utilizes the LEDs in its nose to illuminate it in different colors.
+You will be experimenting with sound using the Finch robot.  
 
-### Computer Color
-To understand what you will be doing, it is necessary to first learn about how a computer tells a light to be a specific color.  Computer have multiple ways to tell a device what color to show, but the one that the Finch uses is RGB color.  RGB tells the light what should be the intensity of the Red, Green, and Blue components of the light.  This intensity is measured from 0 to 255.  To gain some familiarity with this, check out [this link](https://www.w3schools.com/colors/colors_rgb.asp).
+### Understanding Sound
+Different notes are associated with different frequencies of sound.  The higher the frequency, the higher the pitch.  The lower the frequency, the lower the pitch.  
 
 ### Coding the Finch
 You will be experimenting with some code to create three different effects.
 
-1. **Color Swap** - Have the Finch light up in one color then switch to another color after a second.  The code for this segment is below.  The sample code first turns the nose red then turns the nose green.  Try changing the RGB values to see what different colors the Finch can produce.
+1. **Tone Swap** - Have the Finch play one tone for a second then switch to the second tone.  The code for this segment is below.  The sample code first plays the tone A4 (440 Hz) then plays the tone A3 (220 Hz).  Try changing the values to see what different tones the Finch can produce.
 
 ```
-finch.setLED(255,0,0);
+finch.playTone(440, 1000);
 wait(1000);
-finch.setLED(0,255,0);
+finch.playTone(220, 1000);
+wait(1000);
 ```
 
-2. **Traffic Light** - Have the Finch go through 3 cycles of a traffic light (green, yellow, red).  Let each cycle last only up to 3 seconds.
+2. **Play Song** - Have the Finch go play the song in the array **arr**. The timing is given by the array **time**.
 
-3. **Light Show** - Create your own custom light show.
+3. **Sound & Light Show** - Create your own custom light show, but this time add sound to it.
