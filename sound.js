@@ -58,11 +58,11 @@ const time = [1000,1000,1000,1000,1000,1000,2000,1000,1000,2000,1000,1000,2000,1
 
 
 
-function wait(secs, buffer) {
-    var buf = buffer ? buffer : .1;
+function wait(msecs, buffer) {
+    var buf = buffer ? buffer : 100;
     var time1 = new Date().getTime();
     var time2 = new Date().getTime() ;
-    while (time2 < time1 + secs + buf) {
+    while (time2 < time1 + msecs + buf) {
         time2 = new Date().getTime();
     }
 }
